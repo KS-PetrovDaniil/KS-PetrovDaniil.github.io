@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="quiz-section">
+            <div id="timer">Time: 00:00</div>
+            <div class="quiz-container" id="quiz-container">
+                <h1>Math Quiz</h1>
+                <div id="name-container">
+                    <label for="username">Enter your name:</label>
+                    <input type="text" id="username" placeholder="Your name">
+                    <button id="submit-name">Submit</button>
+                </div>
+                <div id="mode-selection" style="display: none;">
+                    <button id="training-mode">Training Mode</button>
+                    <button id="competition-mode">Competition Mode</button>
+                </div>
+                <div id="level-container" style="display: none;">
+                    <label for="difficulty">Choose Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <button id="start-training">Start Training</button>
+                </div>
+                <div id="competition-setup" style="display: none;">
+                    <label for="room-code">Enter Room Code:</label>
+                    <input type="text" id="room-code" placeholder="Room Code">
+                    <button id="join-competition">Join Competition</button>
+                    <button id="create-competition">Create Competition</button>
+                </div>
+                <div id="question-container" class="question-container" style="display: none;">
+                    <p id="question"></p>
+                    <input type="text" id="answer" placeholder="Enter your answer">
+                    <button id="submit-answer">Submit</button>
+                </div>
+                <div id="result-container" class="result-container" style="display: none;">
+                    <p id="result"></p>
+                    <button id="show-result">Show Result</button>
+                    <button id="restart-quiz">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+        <div class="sketch-section">
+            <div class="sketch-container">
+                <h2>Sketch Pad</h2>
+                <canvas id="sketchpad" width="400" height="400"></canvas>
+                <button id="clear-sketchpad">Clear</button>
+            </div>
+        </div>
+    </div>
+    <div class="results-panel" id="results-panel">
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Your Answer</th>
+                    <th>Correct Answer</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
